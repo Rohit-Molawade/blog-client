@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Blog from "@/components/blog";
+import getLatestPosts from "utils/getLatestPost";
 
-export default function Home() {
+export default async function Home() {
+  const blog = await getLatestPosts();
   return (
     <>
       <main className="py-40 bg-black text-white">
@@ -16,11 +18,11 @@ export default function Home() {
         </div>
       </main>
       <section>
-        <p className="flex justify-center text-black pt-12 text-4xl font-public_sans font-extrabold">
-          Latest Blogs
+        <p className="flex justify-center text-black pt-12 text-5xl font-public_sans font-extrabold">
+          Latest Blog
         </p>
       </section>
-      <Blog />
+      <Blog blog={blog} />
     </>
   );
 }

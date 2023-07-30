@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className} ${Public_sans.variable} ${merriweather.variable}`}
       >
-        <header className="flex pt-12 min-w-screen items-center justify-center font-public_sans text-2xl gap-12 text-slate-400) bg-black text-white">
+        <header className="flex pt-12 pb-6 min-w-screen items-center justify-center font-public_sans text-2xl gap-12 bg-black text-white">
           <Link href={"/"} className="hover:border-b-4 pb-2 hover:text-white">
             Home
           </Link>
