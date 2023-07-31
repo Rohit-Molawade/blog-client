@@ -7,7 +7,7 @@ export default async function Comments_section(props) {
         <div className="py-8">
           <p className="text-3xl font-extrabold">Comments</p>
         </div>
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 mb-16">
           <Comments postId={props.postId} />
         </div>
       </div>

@@ -48,6 +48,17 @@ export default function RootLayout({ children }) {
           </Link>
         </header>
         {children}
+        <footer className="p-10 pl-40 bg-black text-white absolute left-0 bottom-0 right-0 h-12">
+          <span className=" text-slate-300">
+            Made By{" "}
+            <a
+              href="https://github.com/Rohit-Molawade"
+              className="text-white font-merriweather font-bold"
+            >
+              Rohit Molawade
+            </a>
+          </span>
+        </footer>
       </body>
     </html>
   );

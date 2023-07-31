@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Comments_section from "@/components/comments_section";
 
-export default async function Blog({blog}) {
+export default async function Blog({ blog }) {
   return (
     <>
       <div className="flex flex-col items-center px-20 pt-20">

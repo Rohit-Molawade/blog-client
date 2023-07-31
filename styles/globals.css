@@ -11,6 +11,14 @@
   }
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 48px;
+  margin: 0;
   color: rgb(0, 0, 0);
 }
