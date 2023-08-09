@@ -1,7 +1,10 @@
 import Link from "next/link";
 import "../styles/globals.css";
 import { Inter, Public_Sans, Merriweather } from "next/font/google";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+//Import font
 const inter = Inter({ subsets: ["latin"] });
 
 const Public_sans = Public_Sans({
@@ -47,6 +50,7 @@ export default function RootLayout({ children }) {
             About
           </Link>
         </header>
+        <ToastContainer />
         {children}
         <footer className="p-10 pl-40 bg-black text-white absolute left-0 bottom-0 right-0 h-12">
           <span className=" text-slate-300">

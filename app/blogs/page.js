@@ -1,8 +1,10 @@
 import getPosts from "utils/getPosts";
 import Image from "next/image";
 import Link from "next/link";
+import { sanitize } from "isomorphic-dompurify";
 
 export default async function Page() {
+  //Display All posts
   const posts = await getPosts();
   return (
     <>
@@ -19,7 +21,12 @@ export default async function Page() {
                     {post.date}
                   </span>{" "}
                   <br />
-                  <p className=" wrap-para">{post.content}</p>
+                  <div
+                    className=" wrap-para"
+                    dangerouslySetInnerHTML={{
+                      __html: sanitize(post.v_content),
+                    }}
+                  />
                 </div>
               </Link>
               <Image

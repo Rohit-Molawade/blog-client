@@ -1,17 +1,18 @@
 import Image from "next/image";
 import Comments_section from "@/components/comments_section";
+import { sanitize } from "isomorphic-dompurify";
 
 export default async function Blog({ blog }) {
   return (
     <>
       <div className="flex flex-col items-center px-20 pt-20">
         <div className="max-w-3xl w-1/2">
-          <div>
+          <div className="flex justify-center">
             <Image
               src={blog.v_banner_image_url}
               alt={`Banner Iamge for ${blog.title}`}
-              width={800}
               height={400}
+              width={100}
             ></Image>
           </div>
           <div className="py-8">
@@ -19,7 +20,7 @@ export default async function Blog({ blog }) {
           </div>
           <div className="flex my-2">
             <Image
-              src={blog.admin_pp_url}
+              src={blog.author.profile_picture_url}
               alt="Admin Profile Picture"
               width={32}
               height={32}
@@ -31,7 +32,11 @@ export default async function Blog({ blog }) {
             </div>
           </div>
           <div className="my-12">
-            <p> {blog.content}</p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: sanitize(blog.v_content),
+              }}
+            />
           </div>
         </div>
       </div>

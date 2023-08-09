@@ -19,9 +19,12 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       gridTemplateColumns: {
-        "dynamic-card": "repeat(auto-fill, minmax(min(30rem, 100%), 1fr))"
+        "dynamic-card": "repeat(auto-fill, minmax(min(30rem, 100%), 1fr))",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms"),
+    // ...
+  ],
 };
