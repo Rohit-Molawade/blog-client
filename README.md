@@ -14,4 +14,4 @@ RESTAPI
 Link to the Repo [https://github.com/Rohit-Molawade/Blog-API]
 
 ## Admin Dashboard
-Link to the Repo [https://github.com/Rohit-Molawade/blog-cms]
+Link to the Repo [https://github.com/Rohit-Molawade/blog-admin-dashboard]
